@@ -1,0 +1,6 @@
+E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\Biblioteca\Views\bin\Debug\Views.dll
+E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\Biblioteca\Views\bin\Debug\Views.pdb
+E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\Biblioteca\Views\obj\Debug\Views.csprojAssemblyReference.cache
+E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\Biblioteca\Views\obj\Debug\Views.csproj.CoreCompileInputs.cache
+E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\Biblioteca\Views\obj\Debug\Views.dll
+E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\Biblioteca\Views\obj\Debug\Views.pdb
