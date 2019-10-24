@@ -25,7 +25,9 @@ namespace Models
                 Alumno alumno = new Alumno(data.GetInt32(0),data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4));
                 alumnosList.Add(alumno);
             }
+            data.Close();
             return alumnosList;
+            
         }
 
 

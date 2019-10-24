@@ -21,7 +21,7 @@ namespace Controllers
             conexion = new Conexion();
             alumnoDao = new AlumnoDao(conexion.conexion);
             alumnoView = new AlumnoView();
-            alumnoDao.UpdateAlumno(new Alumno(3, "44F", "James", "Bond", "Del Campo"));
+            createEvents();
             chargeTable();
             Application.Run(alumnoView);
         }
@@ -39,6 +39,41 @@ namespace Controllers
                 alumnoView.TableAlumno.Rows[n].Cells[3].Value = ((Alumno)alumnosList[i]).apellido1;
                 alumnoView.TableAlumno.Rows[n].Cells[4].Value = ((Alumno)alumnosList[i]).apellido2;
             }
+        }
+
+        public static void createEvents()
+        {
+            alumnoView.ButtonAdd.Click += new EventHandler(ButtonAddClick);
+            alumnoView.ButtonUpdate.Click += new EventHandler(ButtonUpdateClick);
+            alumnoView.ButtonDelete.Click += new EventHandler(ButtonDeleteClick);
+        }
+
+        public static Alumno getAlumnoWithTextBox()
+        {
+            int registro = (int)alumnoView.RegistroText.Value;
+            string dni = alumnoView.DniText.Text;
+            string nombre = alumnoView.NombreText.Text;
+            string apellido1 = alumnoView.Apellido1Text.Text;
+            string apellido2 = alumnoView.Apellido2Text.Text;
+
+            return new Alumno(registro,dni,nombre,apellido1,apellido2);
+        }
+
+        private static void ButtonAddClick(object sender, System.EventArgs e)
+        {
+            alumnoDao.AddAlumno(getAlumnoWithTextBox());
+            chargeTable();
+        }
+
+        private static void ButtonUpdateClick(object sender, System.EventArgs e)
+        {
+            alumnoDao.UpdateAlumno(getAlumnoWithTextBox());
+            chargeTable();
+        }
+        private static void ButtonDeleteClick(object sender, System.EventArgs e)
+        {
+            alumnoDao.DeleteAlumno((int)alumnoView.RegistroText.Value);
+            chargeTable();
         }
     }
 }
