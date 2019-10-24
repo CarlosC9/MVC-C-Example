@@ -21,6 +21,7 @@ namespace Controllers
             conexion = new Conexion();
             alumnoDao = new AlumnoDao(conexion.conexion);
             alumnoView = new AlumnoView();
+            alumnoDao.UpdateAlumno(new Alumno(3, "44F", "James", "Bond", "Del Campo"));
             chargeTable();
             Application.Run(alumnoView);
         }

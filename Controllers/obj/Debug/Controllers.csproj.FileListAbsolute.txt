@@ -13,3 +13,17 @@ E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\Biblioteca\Controllers\obj\Debu
 E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\Biblioteca\Controllers\obj\Debug\Controllers.csproj.CopyComplete
 E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\Biblioteca\Controllers\obj\Debug\Controllers.exe
 E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\Biblioteca\Controllers\obj\Debug\Controllers.pdb
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\bin\Debug\Controllers.exe.config
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\bin\Debug\Controllers.exe
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\bin\Debug\Controllers.pdb
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\bin\Debug\Models.dll
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\bin\Debug\MySql.Data.dll
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\bin\Debug\Views.dll
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\bin\Debug\Models.pdb
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\bin\Debug\Views.pdb
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\obj\Debug\Controllers.csprojAssemblyReference.cache
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\obj\Debug\Controllers.Properties.Resources.resources
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\obj\Debug\Controllers.csproj.GenerateResource.cache
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\obj\Debug\Controllers.csproj.CopyComplete
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\obj\Debug\Controllers.exe
+C:\Users\AlumnadoTarde\Documents\Clase\DAD\C# Visual Studio\PrimerProyecto\Mvc2\MVC-C-Example\Controllers\obj\Debug\Controllers.pdb
