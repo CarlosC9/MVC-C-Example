@@ -12,6 +12,14 @@ namespace Views
 {
     public partial class AlumnoView: Form
     {
+        public DataGridView TableAlumno
+        {
+            get
+            {
+                return this.tableAlumnos;
+            }
+        }
+
         public AlumnoView()
         {
             InitializeComponent();

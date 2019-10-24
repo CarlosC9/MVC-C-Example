@@ -1,6 +1,5 @@
 
 drop database if exists db_biblioteca;
-
 create database db_biblioteca;
 
 use db_biblioteca;
@@ -8,7 +7,6 @@ use db_biblioteca;
 DROP TABLE IF EXISTS `alumnos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-
 
 
 CREATE TABLE `alumnos` (
@@ -237,4 +235,6 @@ INSERT INTO `usuarios` VALUES ('maria','1234'),('david','tito');
 
 
 UNLOCK TABLES;
+
+select * from alumnos;
 
