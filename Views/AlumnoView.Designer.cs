@@ -242,6 +242,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableAlumnos);
             this.Name = "AlumnoView";
+            this.Text = "Alumnos";
             ((System.ComponentModel.ISupportInitialize)(this.tableAlumnos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registroText)).EndInit();
             this.ResumeLayout(false);

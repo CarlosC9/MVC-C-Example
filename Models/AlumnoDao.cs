@@ -69,11 +69,6 @@ namespace Models
                 alumno.registro, alumno.dni, alumno.nombre, alumno.apellido1, alumno.apellido2), this.conexion);
 
             int numChanges = sql.ExecuteNonQuery();
-
-            if (numChanges <= 0)
-            {
-                CustomException.RegisterExistThrow(alumno.registro);
-            }
         }
 
         public void UpdateAlumno(Alumno alumno)

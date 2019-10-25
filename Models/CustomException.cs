@@ -8,7 +8,6 @@ namespace Models
     {
         public int type { get; }
         public string message { get; }
-        public const int REGISTER_EXISTS = 1;
         public const int REGISTER_NOTEXISTS = 2;
         public const int USER_HAVE_LOAN = 3;
 
@@ -16,11 +15,6 @@ namespace Models
         {
             this.message = message;
             this.type = type;
-        }
-
-        public static void RegisterExistThrow(int registro)
-        {
-            throw new CustomException("Error : El registro " + registro + " ya existe", CustomException.REGISTER_EXISTS);
         }
 
         public static void RegisterNotExistThrow(int registro)

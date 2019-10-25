@@ -76,16 +76,6 @@ namespace Controllers
                 alumnoDao.AddAlumno(alumno);
                 chargeTable();
             }
-            catch (CustomException ex)
-            {
-                switch (ex.type)
-                {
-                    case CustomException.REGISTER_EXISTS:
-                        MessageBox.Show(alumnoView, ex.message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        chargeTable();
-                        break;
-                }
-            }
             catch (MySqlException ex)
             {
                 string duplicateError = string.Format("Duplicate entry '{0}' for key 'PRIMARY'",alumno.registro.ToString());
