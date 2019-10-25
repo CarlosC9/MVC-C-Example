@@ -53,6 +53,7 @@
             // 
             // tableAlumnos
             // 
+            this.tableAlumnos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.tableAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Registro,
@@ -226,6 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(800, 471);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonUpdate);

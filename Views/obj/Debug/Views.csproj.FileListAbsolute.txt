@@ -14,3 +14,10 @@ E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\MVC-C-Example\Views\obj\Debug\V
 E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\MVC-C-Example\Views\obj\Debug\Views.csproj.CoreCompileInputs.cache
 E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\MVC-C-Example\Views\obj\Debug\Views.dll
 E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\MVC-C-Example\Views\obj\Debug\Views.pdb
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Views\bin\Debug\Views.dll
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Views\bin\Debug\Views.pdb
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Views\obj\Debug\Views.csprojAssemblyReference.cache
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Views\obj\Debug\Views.AlumnoView.resources
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Views\obj\Debug\Views.csproj.GenerateResource.cache
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Views\obj\Debug\Views.dll
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Views\obj\Debug\Views.pdb

@@ -42,3 +42,17 @@ E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\MVC-C-Example\Controllers\obj\D
 E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\MVC-C-Example\Controllers\obj\Debug\Controllers.csproj.CopyComplete
 E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\MVC-C-Example\Controllers\obj\Debug\Controllers.exe
 E:\Tarde\Carlos\Desarollo_de_interfaces\TaraeaC#\MVC-C-Example\Controllers\obj\Debug\Controllers.pdb
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\bin\Debug\Controllers.exe.config
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\bin\Debug\Controllers.exe
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\bin\Debug\Controllers.pdb
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\bin\Debug\Models.dll
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\bin\Debug\MySql.Data.dll
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\bin\Debug\Views.dll
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\bin\Debug\Models.pdb
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\bin\Debug\Views.pdb
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\obj\Debug\Controllers.csprojAssemblyReference.cache
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\obj\Debug\Controllers.Properties.Resources.resources
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\obj\Debug\Controllers.csproj.GenerateResource.cache
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\obj\Debug\Controllers.csproj.CopyComplete
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\obj\Debug\Controllers.exe
+F:\Clase\1920\Clase\DAD\Proyectos\MVC-C-Example\Controllers\obj\Debug\Controllers.pdb
