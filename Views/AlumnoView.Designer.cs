@@ -176,9 +176,24 @@
             // registroText
             // 
             this.registroText.Location = new System.Drawing.Point(26, 272);
+            this.registroText.Maximum = new decimal(new int[] {
+            20000,
+            0,
+            0,
+            0});
+            this.registroText.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.registroText.Name = "registroText";
             this.registroText.Size = new System.Drawing.Size(346, 20);
             this.registroText.TabIndex = 11;
+            this.registroText.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // buttonAdd
             // 

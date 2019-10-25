@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 using Models;
 using Views;
 using System.Collections;
@@ -18,12 +19,20 @@ namespace Controllers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            conexion = new Conexion();
-            alumnoDao = new AlumnoDao(conexion.conexion);
             alumnoView = new AlumnoView();
-            createEvents();
-            chargeTable();
-            Application.Run(alumnoView);
+            try
+            {
+                conexion = new Conexion();
+                alumnoDao = new AlumnoDao(conexion.conexion);
+                createEvents();
+                chargeTable();
+                Application.Run(alumnoView);
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show(null,"Error fatal: Imposible conectar a la base de datos", "Error Fatal", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            
         }
 
         public static void chargeTable()
@@ -61,19 +70,88 @@ namespace Controllers
 
         private static void ButtonAddClick(object sender, System.EventArgs e)
         {
-            alumnoDao.AddAlumno(getAlumnoWithTextBox());
-            chargeTable();
+            Alumno alumno = getAlumnoWithTextBox();
+            try
+            {
+                alumnoDao.AddAlumno(alumno);
+                chargeTable();
+            }
+            catch (CustomException ex)
+            {
+                switch (ex.type)
+                {
+                    case CustomException.REGISTER_EXISTS:
+                        MessageBox.Show(alumnoView, ex.message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        chargeTable();
+                        break;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                string duplicateError = string.Format("Duplicate entry '{0}' for key 'PRIMARY'",alumno.registro.ToString());
+                if (ex.Message == duplicateError)
+                {
+                    MessageBox.Show(alumnoView, "Error : El registro " + alumno.registro + " ya existe",
+                            "Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } else {
+                    MessageBox.Show(alumnoView, "Error Fatal: No se puede ejecutar la sentencia", "Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
+                }
+            }
         }
 
         private static void ButtonUpdateClick(object sender, System.EventArgs e)
         {
-            alumnoDao.UpdateAlumno(getAlumnoWithTextBox());
-            chargeTable();
+            Alumno alumno = getAlumnoWithTextBox();
+            try
+            {
+                alumnoDao.UpdateAlumno(alumno);
+                chargeTable();
+            }
+            catch (CustomException ex)
+            {
+                switch (ex.type)
+                {
+                    case CustomException.REGISTER_NOTEXISTS:
+                        MessageBox.Show(alumnoView, ex.message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        chargeTable();
+                        break;
+                }
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show(alumnoView, "Error Fatal: No se puede ejecutar la sentencia", "Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
         }
         private static void ButtonDeleteClick(object sender, System.EventArgs e)
         {
-            alumnoDao.DeleteAlumno((int)alumnoView.RegistroText.Value);
-            chargeTable();
+            int registro = (int)alumnoView.RegistroText.Value;
+            try
+            {
+                alumnoDao.DeleteAlumno(registro);
+                chargeTable();
+            }
+            catch (CustomException ex)
+            {
+                switch (ex.type)
+                {
+                    case CustomException.REGISTER_NOTEXISTS:
+                        MessageBox.Show(alumnoView, ex.message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        chargeTable();
+                        break;
+                    case CustomException.USER_HAVE_LOAN:
+                        MessageBox.Show(alumnoView, ex.message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        chargeTable();
+                        break;
+                }
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show(alumnoView, "Error Fatal: No se puede ejecutar la sentencia", "Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+            
         }
     }
 }

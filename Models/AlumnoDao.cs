@@ -34,8 +34,31 @@ namespace Models
         public void DeleteAlumno(int registro)
         {
 
+            sql = new MySqlCommand("SELECT * FROM prestamos", this.conexion);
+            MySqlDataReader data = sql.ExecuteReader();
+            while (data.Read())
+            {
+                int registroNow = 0;
+                if (Int32.TryParse(data.GetString(1),out registroNow))
+                {
+                    if (registro == registroNow)
+                    {
+                        data.Close();
+                        CustomException.UserHaveLoanThrow(registro);
+                    }
+                }
+                
+            }
+            data.Close();
+            
+
             sql = new MySqlCommand("delete from alumnos where registro = " + registro, this.conexion);
-            int data = sql.ExecuteNonQuery();
+            int numChanges = sql.ExecuteNonQuery();
+
+            if (numChanges <= 0)
+            {
+                CustomException.RegisterNotExistThrow(registro);
+            }
 
         }
 
@@ -45,8 +68,12 @@ namespace Models
             sql = new MySqlCommand(string.Format("Insert into alumnos values('{0}', '{1}', '{2}', '{3}', '{4}')",
                 alumno.registro, alumno.dni, alumno.nombre, alumno.apellido1, alumno.apellido2), this.conexion);
 
-            int data = sql.ExecuteNonQuery();
+            int numChanges = sql.ExecuteNonQuery();
 
+            if (numChanges <= 0)
+            {
+                CustomException.RegisterExistThrow(alumno.registro);
+            }
         }
 
         public void UpdateAlumno(Alumno alumno)
@@ -56,7 +83,12 @@ namespace Models
                 " apellido1='{3}', apellido2='{4}' where registro = '{0}'", alumno.registro, alumno.dni, alumno.nombre, alumno.apellido1, alumno.apellido2),
                 this.conexion);
 
-            int data = sql.ExecuteNonQuery();
+            int numChanges = sql.ExecuteNonQuery();
+
+            if (numChanges <= 0)
+            {
+                CustomException.RegisterNotExistThrow(alumno.registro);
+            }
 
         }
 

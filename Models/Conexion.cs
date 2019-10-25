@@ -5,7 +5,7 @@ namespace Models
     public class Conexion
     {
 
-        public MySqlConnection conexion { get; set; }
+        public MySqlConnection conexion { get;  }
 
 
         public Conexion()
